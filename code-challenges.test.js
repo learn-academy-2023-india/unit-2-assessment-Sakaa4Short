@@ -34,10 +34,31 @@ const object2 = { number: 0 }
 const object3 = { number: -7 }
 // Expected output: "-7 is not divisible by three"
 
-// b) Create the function that makes the test pass.
+// describe("divisibleOrNah", () => {
+//     it(" decides if the number inside it is evenly divisible by three or not", () => {
+//         expect(divisibleOrNah(15)).toEqual("15 is divisible by three")
+//         expect(divisibleOrNah(0)).toEqual("0 is divisible by three")
+//         expect(divisibleOrNah(-7)).toEqual("-7 is not divisible by three")
+//     })
 
-// Pseudo code:
+// })
 
+// // b) Create the function that makes the test pass.
+
+// // Pseudo code:
+// // Input: objects with the numbers pre selected.
+// // Output: Identification if the numbers are divisible by 3. 
+// // Create a test that can return the output that whether or not the objects are divisible by three
+
+// const divisibleOrNah = (number) => {
+//     if (number % 3 === 0 )
+//     return `${number} is divisible by three`
+//     else {
+//         return `${number} is not divisible by three`
+//     }
+//   }
+  
+      
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
 
 // a) Create a test with expect statements for each of the variables provided.
@@ -47,6 +68,38 @@ const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 const randomNouns2 = ["temperature", "database", "chopsticks", "mango"]
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango"]
 
+describe("capitalLetters") = () => {
+    it("return strings with the first letter capitalized", () => {
+        expect(capitalLetters(randomNouns1)).toEqual("Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew")
+        expect(capitalLetters(randomNouns2)).toEqual("Temperature", "Database", "Chopsticks", "Mango")
+    })
+
+}
+
 // b) Create the function that makes the test pass.
 
+
 // Pseudo code:
+// Input: The arrays that have preselected strings
+// Output: The arrays that have the first letters added to the 
+// Create a function that capitalizes the first letter in each index in the array
+// Return an output that capitalizes ONLY the first letter and not the entire word
+
+
+const capitalLetters = (array) => {
+    return array.map((value) => {
+      if (typeof value === 'string' || value instanceof String) {
+        return value.charAt(0).toUpperCase() + value.slice(1)
+      } else {
+        return value
+      }
+    })
+}
+
+//This method has failed but I believe it is due to the output not showoing up exacly. One idea would be to place the first letter aside and then capitalize it while recofusing on the rest of the string. I have not  been able to make them work but below are other options Ive tried. 
+
+// const capitalizeLetter = (() => {
+// 	const firstChar = str.charAt(0).toUpperCase();
+// 	const remainingChars = str.slice(1);
+// 	return `${firstChar}${remainingChars}`;
+// })();

@@ -34,14 +34,14 @@ const object2 = { number: 0 }
 const object3 = { number: -7 }
 // Expected output: "-7 is not divisible by three"
 
-// describe("divisibleOrNah", () => {
-//     it(" decides if the number inside it is evenly divisible by three or not", () => {
-//         expect(divisibleOrNah(15)).toEqual("15 is divisible by three")
-//         expect(divisibleOrNah(0)).toEqual("0 is divisible by three")
-//         expect(divisibleOrNah(-7)).toEqual("-7 is not divisible by three")
-//     })
+describe("divisibleOrNah", () => {
+    it(" decides if the number inside it is evenly divisible by three or not", () => {
+        expect(divisibleOrNah(15)).toEqual("15 is divisible by three")
+        expect(divisibleOrNah(0)).toEqual("0 is divisible by three")
+        expect(divisibleOrNah(-7)).toEqual("-7 is not divisible by three")
+    })
 
-// })
+})
 
 // // b) Create the function that makes the test pass.
 
@@ -50,13 +50,13 @@ const object3 = { number: -7 }
 // // Output: Identification if the numbers are divisible by 3. 
 // // Create a test that can return the output that whether or not the objects are divisible by three
 
-// const divisibleOrNah = (number) => {
-//     if (number % 3 === 0 )
-//     return `${number} is divisible by three`
-//     else {
-//         return `${number} is not divisible by three`
-//     }
-//   }
+const divisibleOrNah = (number) => {
+    if (number % 3 === 0 )
+    return `${number} is divisible by three`
+    else {
+        return `${number} is not divisible by three`
+    }
+  }
   
       
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.

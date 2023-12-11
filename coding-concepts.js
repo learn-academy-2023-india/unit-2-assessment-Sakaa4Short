@@ -9,28 +9,29 @@
 // --------------------1) What will this log?
 
 const cohort = "India 2023"
-// console.log(cohort.split(" "))
+console.log(cohort.split(" "))
 
-// a) Your answer:
-// b) Verify and explain:
+// a) Your answer: The terminal will print strings around the individual characters
+// b) Verify and explain: Two strings were printed "India" and "2023". The .split built in method divides the the string into substrings and returns them in an array.
 
 // --------------------2) What will this log?
 
 const greeter = (name) => {
   `Hello, ${name}!`
 }
-// console.log(greeter("LEARN Student"))
+console.log(greeter("LEARN Student"))
 
-// a) Your answer:
-// b) Verify and explain:
+// a) Your answer: There is no return so the terminal will give no answer.
+// b) Verify and explain: The terminal printed undefined. Without the return placed on line 20 before `Hello, ${name}!` there is no way for the function to work properly.
+
 
 // --------------------3) What will this log?
 
 const onlyOdds = [11, 12, 13, 14, 15].filter((number) => number % 2 !== 0)
-// console.log(onlyOdds)
+console.log(onlyOdds)
 
-// a) Your answer:
-// b) Verify and explain:
+// a) Your answer: The terminal will print only the odd numbers
+// b) Verify and explain: The terminal printed the odd numbers only. The onlyOdds is a function is programmed with the bang operater and modulo indicating that what will be printed will include things that do not have a remainder of 0
 
 // --------------------4) What will this log?
 
@@ -40,10 +41,10 @@ const myCodingSkills = {
   databases: "PostgreSQL",
   versionControl: "GitHub"
 }
-// console.log(myCodingSkills.languages[0])
+console.log(myCodingSkills.languages[0])
 
-// a) Your answer:
-// b) Verify and explain:
+// a) Your answer: The terminal should print off "JavaScript"
+// b) Verify and explain: The terminal printed JavaScript. The myCodingSkills object has the targeted the languages key(symbol) with dot notation and with the [0] index being identified within the console.log. That is the Javascript string on line 39.
 
 // --------------------5) What will this log?
 
@@ -55,7 +56,7 @@ class Learn {
   }
 }
 const learnStudent = new Learn("George")
-// console.log(learnStudent)
+console.log(learnStudent)
 
-// a) Your answer:
-// b) Verify and explain:
+// a) Your answer: The terminal should print "George" "India" 2023
+// b) Verify and explain: The terminal printed Learn { student: 'George', cohort: 'India', year: 2023 }. The class Learn had a constructor with the value of name. That means that the string of "George" on line 58 is the variable that is necesarry for input (especially since the rest of the class has defined values on the other 2 keys) thus the terminal printed what it did.
